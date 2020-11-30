@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+    </style>
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    
+// ข้อ1
+let num = prompt("input number");
+let star = "";
+function methoddraw(num){
+    for(let i=0; i<num; i++){
+star+="*"
+    }
+alert(star)
+}
+methoddraw(num);
+// ข้อ2
+let num = prompt("input number");
+let star ="";
+function methodDraw(num){
+    for(let i = 0; i<num;i++){
+        for(let j =0; j<num;j++){
+//j=colunm, i=row
+            star+="*"
+           
+        }
+        star+="\n"
+        
+    }  
+    alert(star)    
+}
+methodDraw(num);
+// ข้อ3
+let num = prompt("input number");
+let sig = "";
+function methodDraw(num){
+    for(let i = 0; i<num; i++){
+        for(let j=0; j<num; j++){
+          sig+=1 +j
+        }
+        sig+="\n"
+    }
+    alert(sig)
+}
+methodDraw(num);
+// ข้อ4
+let num = prompt("input number");
+let sig ="";
+function methodDraw(num){
+    for(let i = 0; i<num; i++){
+        for(let j=0; j<num; j++){
+        sig+=i+1
+    }
+    sig+="\n"
+}
+alert(sig)
+}
+methodDraw(num);
+// ข้อ5
+let num = prompt("input number")*1;
+let sig ="";
+function methodDraw(num){
+    for(let i = num; i>0; i--){   
+// ทำกลับจาก 1-5 ให้เป็น 5-1 ก่อน
+        for(let j= 0; j<num; j++){
+        sig+=i
+    }
+    sig+="\n"
+}
+alert(sig)
+}
+methodDraw(num);
+// ข้อ6
+let num = prompt("input number")*1;
+let sig ="";
+
+function methodDraw(num){
+    let x=1;
+    for(let i = 0; i<num; i++){   
+        for(let j= 0; j<num; j++){
+        sig+=x++;
+    }
+    sig+="\n"
+}
+alert(sig)
+}
+methodDraw(num);
+// ข้อ7
+let num = prompt("input number")*1;
+let sig ="";
+
+function methodDraw(num){
+    let x=num**2;
+
+    for(let i = 0; i<num; i++){   
+        for(let j= 0; j<num; j++){
+        sig+=x--;
+
+    }
+    sig+="\n"
+}
+alert(sig)
+}
+methodDraw(num);
+
+let num = prompt("input number")*1;
+let sig ="";
+
+function methodDraw(num){
+    let x=num;
+
+    for(let i = 0; i<num; i++){   
+        for(let j= 0; j<num; j++){
+        sig+=x;
+    }
+    sig+="\n"
+}
+alert(sig)
+}
+methodDraw(num);
+// ข้อ 8
+      let num = prompt("input number")*1;
+      n = n* 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        sig += i * 2;
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ 9
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 1; i <= n; i++) {
+        sig += i * 2;
+        sig += "\n";
+      }
+      alert(sig);
+    
+//ข้อ 10
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            sig += i * j;
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+//ข้อ 11
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i == j) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ12
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j == n - 1) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ13
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (j > i) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ14
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j >= n) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ15
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let result = "";
+      for (let i = 0; i < n * 2 - 1; i++) {
+        for (let j = 0; j < n; j++) {
+          if (j > i || i + j >= n * 2 - 1) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ16
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      sig = "ข้อ 16 หาย";
+      alert(sig);
+    
+// ข้อ17
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j < n - 1) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ 18
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i > j) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ19
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n * 2 - 1; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j < n - 1 || i - j >= n) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ20
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      let num = 1;
+      for (let i = 0; i < n * 2 - 1; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j < n - 1 || i - j >= n) {
+            sig += "-";
+          } else {
+            sig += num;
+            num++;
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ21
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n * 2 - 1; j++) {
+          if (i + j < n - 1 || j - i >= n) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ22
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n * 2 - 1; j++) {
+          if (i > j || i + j >= n * 2 - 1) {
+            sigt += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ23
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      for (let i = 0; i < n * 2 - 1; i++) {
+        for (let j = 0; j < n * 2 - 1; j++) {
+          if (i + j < n - 1 || j - i >= n || i - j >= n || i + j >= n * 3 - 2) {
+            sig += "-";
+          } else {
+            sig += "*";
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+// ข้อ24
+      let num = prompt("input number")*1;
+      n = n * 1;
+      let sig = "";
+      let num = 1;
+      for (let i = 0; i < n * 2 - 1; i++) {
+        for (let j = 0; j < n * 2 - 1; j++) {
+          if (i + j < n - 1 || j - i >= n || i - j >= n || i + j >= n * 3 - 2) {
+            sig += "-";
+          } else {
+            sig += num;
+            num++;
+          }
+        }
+        sig += "\n";
+      }
+      alert(sig);
+    
+  </script>
+</html>
