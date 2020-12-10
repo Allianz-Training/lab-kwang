@@ -1,0 +1,96 @@
+-- ข้อ1
+CREATE TABLE Sailors (
+    sid int,
+    sname varchar(255),
+    rating int,
+    age NUMERIC 
+);
+INSERT INTO Sailors (sid, sname, rating, age)
+VALUES ('22', 'Dustin', '7', '45.0'),('29','Brutus','1','33.0'),('31','Lubber','8','55.5'),
+('32','Andy','8','25.5'),('58','Rusty','10','35.0'),('64','Horatio','7','35.0'),('71','Zorba','10','16.0'),
+('74','Horatio','9','35.0'),('85','Art','3','25.5'),('95','Bob','3','63.5')
+select sname,age from Sailors
+select DISTINCT sname,age from Sailors
+
+CREATE TABLE Reserves (
+    sid int,
+	bid int,
+    day varchar(255)  
+);
+-- ข้อ2
+INSERT INTO Reserves (sid, bid, day) 
+VALUES ('22', '101', '10/10/14'),('22','102','10/10/14'),('22','103','10/08/14'),('22','104','10/07/14'),
+('31','102','11/10/14'),('31','103','11/06/14'),('31','104','11/12/14'),('64','101','09/05/14'),
+('64','102','09/08/14'),('74','103','09/08/14')
+SELECT Sailors.sname,Reserves.day,Reserves.bid
+FROM Sailors
+INNER JOIN Reserves ON Sailors.sid=Reserves.sid and Reserves.bid=103;
+-- ข้อ3
+CREATE TABLE Boats (
+	bid int,
+	bname varchar(255),
+    color varchar(255)  
+);
+INSERT INTO Boats (bid, bname,color)
+VALUES ('101','Interlake','Blue'),('102','Interlake','Red'),('103','Clipper','Green'),
+('104','Marine','red')
+
+SELECT Reserves.sid
+FROM Reserves
+inner JOIN Boats on Boats.bid=Reserves.bid
+WHERE Boats.color='Red' or Boats.color='red';
+
+-- SELECT Sailors.sid,Reserves.sid,Boats.color
+-- FROM Sailors
+-- INNER JOIN Reserves ON Boats.color='Red' or color='red';
+
+
+-- 
+-- SELECT Boats.bid,Boats.color,Boats.bname
+-- FROM Boats 
+-- WHERE color='Red' Or color='red';
+
+-- ข้อ4
+SELECT Sailors.sname
+FROM Sailors
+inner JOIN Reserves on Reserves.sid=Sailors.sid
+inner JOIN Boats on Boats.bid=Reserves.bid
+WHERE Boats.color='Red' or Boats.color='red';
+
+
+--ข้อ5
+SELECT Boats.color
+FROM Boats
+inner JOIN Reserves on Boats.bid=Reserves.bid
+inner JOIN Sailors on Reserves.sid=Sailors.sid
+WHERE Sailors.sname = 'Lubber';
+
+--ข้อ6
+SELECT DISTINCT Sailors.sname
+FROM Sailors
+inner JOIN Boats on Boats.bid=Reserves.bid
+inner JOIN Reserves on Reserves.sid=Sailors.sid
+
+
+--ข้อ6.1
+SELECT DISTINCT Sailors.sname
+FROM Sailors
+inner JOIN Boats on Boats.bid=Reserves.bid
+inner JOIN Reserves on Reserves.sid=Sailors.sid
+WHERE Boats.color ='red' or Boats.color ='red' or Boats.color ='Green';
+
+
+--ข้อ7
+SELECT DISTINCT Sailors.sname
+FROM Sailors
+inner JOIN Boats on Boats.bid=Reserves.bid
+inner JOIN Reserves on Reserves.sid=Sailors.sid
+WHERE Boats.color ='red' or Boats.color ='red' AND (Boats.color ='Green');
+
+--ข้อ8
+SELECT DISTINCT Sailors.sid
+FROM Sailors
+inner JOIN Boats on Boats.bid=Reserves.bid
+inner JOIN Reserves on Reserves.sid=Sailors.sid
+WHERE Boats.color ='red' or Boats.color ='red' AND NOT (Boats.color ='Green');
+
